@@ -1,6 +1,8 @@
 from scapy.all import *
+import os
 
 src_port = 1024
+os.system("sudo iptables -A OUTPUT -p tcp --tcp-flags RST RST -s $(hostname -I) -j DROP")
 while 1:
     dst_ip = "192.168.200.62"
     dst_port = 31337
