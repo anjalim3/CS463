@@ -1,0 +1,4 @@
+zone "illinois.edu" {
+type master;
+file "/etc/bind/zone/illinois.edu.zone";
+};

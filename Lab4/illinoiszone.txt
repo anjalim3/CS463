@@ -1,0 +1,13 @@
+$TTL 1d ; Time to live
+$ORIGIN illinois.edu. ; We are the authority of illinois.edu
+@ IN SOA illinois.edu. www.illinois.edu. (
+ 2018021300 ; Serial - must update each time this file is modified
+ 1d ; Refresh
+ 2h ; Retry
+ 7d ; Expire
+ 3h ; nxdomain TTL
+ )
+ IN NS ns1.illinois.edu.
+ns1 IN A 192.168.XXX.XXX ; Name server definition
+illinois.edu. IN A 192.168.200.62 ; Web server definition
+www IN CNAME illinois.edu. ; Alias for illinois.edu
